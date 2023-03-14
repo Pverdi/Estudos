@@ -6,25 +6,35 @@ public class Main
 {
     public static void main(String[] args){
         
-        double xA, yA, xB, yB, distancia;
+        double resultado;
+        Ponto a = new Ponto();
+        Ponto b = new Ponto();
         
         Scanner ler = new Scanner(System.in);
         
         System.out.println("Para calcular a distância entre dois pontos no plano cartesiano");
         
         System.out.print("Insira o x de A: ");
-        xA = ler.nextDouble();
+        a.setX(ler.nextDouble());
         System.out.print("Insira o y de A: ");
-        yA = ler.nextDouble();
+        a.setY(ler.nextDouble());
         
         System.out.print("Insira o x de B: ");
-        xB = ler.nextDouble();
+        b.setX(ler.nextDouble());
         System.out.print("Insira o y de B: ");
-        yB = ler.nextDouble();
+        b.setY(ler.nextDouble());
         
-        distancia =  Math.sqrt(Math.pow(xB - xA,2) + Math.pow(yB - yA, 2));
+ 
         
+        resultado = calculaDistancia(a.x, b.x, a.y, b.y);
         System.out.println("Resultado");
-        System.out.printf("%.4f%n", distancia);
+        System.out.printf("%.4f%n", resultado);
     }
-}
+    
+    public static double calculaDistancia(double xa, double xb, double ya, double yb){
+            return Math.sqrt(Math.pow(xb - xa,2) + Math.pow(yb - ya, 2));
+    } 
+
+    }
+
+

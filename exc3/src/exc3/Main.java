@@ -46,6 +46,14 @@ public class Main {
             System.out.printf("Area: %f\n", area);
             System.out.printf("Perímetro: %f", peri);
         }
+        if(lado1 != lado3 && lado2 != lado3 && lado1 == lado2){
+            
+            System.out.print("Triângulo isosceles!\n");
+            peri = lado1 + lado2 + lado3;
+            area = Math.sqrt((peri/2)*(((peri/2) - lado1)*((peri/2) - lado2)*((peri/2) - lado3)));
+            System.out.printf("Area: %f\n", area);
+            System.out.printf("Perímetro: %f", peri);
+        }
         
     }
     
